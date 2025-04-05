@@ -18,8 +18,7 @@ int main()
     float pib1, pib2, pibpercap1, pibpercap2;
     float densidade1, densidade2;
     float superpoder1, superpoder2;
-    int resultadopopul, resultadopontos, resultadoarea, resultadopib, resultadopercapt, resultadodensid, resultadopoder;
-
+    
     // Entrada e saída de dados da primeira carta com as funções scanf e printf.
     printf("Dados da Carta 1:\n");
 
@@ -134,23 +133,21 @@ int main()
     printf("\n");
 
     // Comparação das cartas.
-    printf("Carta 1 vence quando Valor (1).\n");
-    printf("Carta 2 vence quando Valor (0) .\n\n");
-    printf("Comparação da castas:\n");
-    resultadopopul = populacao1 > populacao2;
-    printf("População: %d \n", resultadopopul);
-    resultadopontos = pontosturisticos1 > pontosturisticos2;
-    printf("Pontos turísticos: %d \n", resultadopontos);
-    resultadoarea = area1 > area2;
-    printf("Área: %d \n", resultadoarea);
-    resultadopib = pib1 > pib2;
-    printf("PIB: %d \n", resultadopib);
-    resultadopercapt = pibpercap1 < pibpercap2;
-    printf("PIB Per Capita: %d \n", resultadopercapt);
-    resultadodensid = densidade1 > densidade2;
-    printf("Densidade Populacional: %d \n", resultadodensid);
-    resultadopoder = superpoder1 > superpoder2;
-    printf("Super Poder: %d \n", resultadopoder);
+    printf("Comparação das cartas.\n");
+    printf("Atributo selecionado: População\n\n");
+
+    if(populacao1 > populacao2)
+    {
+        printf("Carta 1 - %s: %d", nomedoestado1, populacao1);
+        printf("Carta 2 - %s: %d ", nomedoestado2, populacao2);
+        printf("Carta 1 venceu!\n");
+    }else
+    {
+        printf("Carta 1 - %s: %d\n", nomedoestado1, populacao1);
+        printf("Carta 2 - %s: %d\n ", nomedoestado2, populacao2);
+        printf("Carta 2 venceu!\n"); 
+    }
+    
     printf("\n");
 
     return 0;
